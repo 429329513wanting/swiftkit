@@ -31,6 +31,8 @@ func DLog<T>(msg:T,file:String = #file,
     
     print("========\n--FILE--:\((file as NSString).lastPathComponent)[LINE:\(line)]\n--FUNCTION--:\(method)\n --CONTENT--:\(msg)\n========")
 }
+//网络超时
+let TIMEOUT = 15
 
 //屏幕适配
 let KScreenWidth = UIScreen.main.bounds.size.width
@@ -63,7 +65,11 @@ let suitParm:CGFloat = (iphone6p ? 1.12 : (iphone6 ? 1.0 : (iphone6pBigMode ? 1.
 
 
 
-
+func PUSH(from:UIViewController, to: UIViewController) {
+    
+    from.navigationController?.pushViewController(to, animated: true)
+}
+func POP(vc:UIViewController){vc.navigationController?.popViewController(animated: true)}
 
 
 

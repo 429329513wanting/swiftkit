@@ -10,6 +10,8 @@ import Foundation
 import MBProgressHUD
 import SVProgressHUD
 import HandyJSON
+import Alamofire
+
 
 public typealias ALNetRequestResponse<T: ALNetHTTPResponse> = ((ALResult<T>)->Void)
 
@@ -17,7 +19,7 @@ public typealias ALNetRequestResponse<T: ALNetHTTPResponse> = ((ALResult<T>)->Vo
 open class HTTPRequestManager {
     
     ///get请求
-    open class func GetRequest<T: ALNetHTTPResponse>(
+    open class func GETRequest<T: ALNetHTTPResponse>(
         url urlString: String,
         urlEncoding encoding: ALParameterEncoding = ALURLEncoding.default,
         header dictHeader:[String : String]? = nil,
@@ -77,6 +79,9 @@ open class HTTPRequestManager {
         request(httpMethod: .delete, url: urlString, urlEncoding: encoding, header: dictHeader, parameter: parameter, contentType: contentType,isSlience: isSlience, preSetupHandle: preSetupHandle, completionHandler: completionHandler)
         
     }
+    
+    
+    
     ///最终发起请求,默认POST
     @discardableResult
     open class func request<T: ALNetHTTPResponse>(
@@ -94,23 +99,31 @@ open class HTTPRequestManager {
         
         //不是静默加载
         if !isSlience {
-            SVProgressHUD.show(withStatus: "加载中...")
+            
+            SVProgressHUD.show()
             SVProgressHUD.setDefaultStyle(.dark)
-            SVProgressHUD.setDefaultAnimationType(.native)
+            SVProgressHUD.setDefaultAnimationType(.flat)
         }
         let param = self.getParameter(encoding: encoding, userParameter: parameter)
-        let request = ALHTTPRequestOperationManager.default.requestBase(httpMethod: httpMethod, url: urlString, urlEncoding: encoding, header: dictHeader, parameter: param, contentType: contentType, preSetupHandle: preSetupHandle) { (response) in
+        let request = ALHTTPRequestOperationManager.default.requestBase(httpMethod: httpMethod,
+                                                                        url: urlString,
+                                                                        urlEncoding: encoding,
+                                                                        header: dictHeader,
+                                                                        parameter: param,
+                                                                        contentType: contentType,
+                                                                        preSetupHandle: preSetupHandle) { (response) in
             //打印
-            SVProgressHUD.dismiss(withDelay: 1)
             #if DEBUG
-                print("=============================REQUEST:\n\(httpMethod.rawValue.uppercased())\n"+urlString)
+                print("🍀============APP REQUEST:\n\(httpMethod.rawValue.uppercased())\n"+urlString)
                 print("parameter:\n"+"\(param.jsonValue())")
-                print("=============================RESPONSE:")
+                print("🍀============APP RESPONSE:")
                 switch response.result {
                 case .success(_):
+                    
                     let dic = response.result.value as! Dictionary<String, Any>
-                    DLog(msg: dic.jsonValue())
+                    print(dic.jsonValue())
                 case .failure(_):
+                    
                     guard let errData = response.data else {
                         print(response)
                         return
@@ -124,7 +137,11 @@ open class HTTPRequestManager {
             #endif
         }
         
+        
         request.responseObject { (response: ALDataResponse<T>) in
+            
+            SVProgressHUD.dismiss(withDelay: 1)
+
             switch response.result {
             case .success(let res):
                 var resSuccess = res
@@ -134,6 +151,22 @@ open class HTTPRequestManager {
                     resSuccess.errorMsg = err.domain
                 }
                 
+                if resSuccess.errorMsg?.contains("项目编号有误,请重新填写") == true{
+                    
+                    
+                    NotificationCenter.default.post(name: NSNotification.Name(rawValue: "projectCodeError"), object: nil)
+                    
+                }
+                
+                if resSuccess.status != 200  {
+                    
+                    ToastUtil.showHUDError(msg: resSuccess.errorMsg!)
+                    completionHandler?(.failure(resSuccess))
+
+                    return
+                }
+                
+
                 completionHandler?(.success(resSuccess))
                 
             case .failure(let error):
@@ -150,73 +183,100 @@ open class HTTPRequestManager {
         return request
     }
     
-    
-    open class func uploadPicture<T: ALNetHTTPResponse>(
-        url urlString: String,
-        file:[String : Any] = [String : Any](),
-        preSetupHandle: ALHTTPManagerSetupHandle? = nil,
-        completionHandler: ALNetRequestResponse<T>?)
-    {
+    ///项目接口单独封装，因为返回格式与总控接口的不统一而且返回格式易变
+    class func projectRequest(url:String,method:ALHTTPMethod,params:[String:Any],success: @escaping OnSuccess,fail:@escaping OnFail){
         
-        ALHTTPRequestOperationManager.default.uploadPicture(url: urlString,
-                                                         file:file,
-                                                         preSetupHandle: preSetupHandle) { (encodingResult) in
+        SVProgressHUD.show()
+        SVProgressHUD.setDefaultStyle(.dark)
+        SVProgressHUD.setDefaultAnimationType(.flat)
+        
+        print("🍎============PROJECT REQUEST:\n\(url)\n\(method.rawValue)\n🍎============params:\n\(params.jsonStr())")
+        
+        let manager = Alamofire.SessionManager.default
+        manager.session.configuration.timeoutIntervalForRequest = TimeInterval(TIMEOUT)
+        
+
+        let request = manager.request(url, method: method, parameters:params,encoding:URLEncoding.default, headers:nil)
+        
+        request.responseJSON { (response) in
             
-            switch encodingResult {
-            case .success(let upload, _, _):
+            SVProgressHUD.dismiss(withDelay: 1)
+            switch response.result{
+            case .success(let value):
                 
-                upload.responseJSON { response in
-                    //打印
-                    #if DEBUG
-                        print("=============================REQUEST:\nPOST "+urlString)
-                        print("=============================RESPONSE:")
-                        switch response.result {
-                        case .success(_):
-                            DLog(msg: response)
-                        case .failure(_):
-                            guard let errData = response.data else {
-                                print(response)
-                                return
-                            }
-                            guard let errStr = String(data: errData, encoding: .utf8) else {
-                                print(response)
-                                return
-                            }
-                            print(errStr)
+                let realResult = value as? NSDictionary
+                if realResult == nil{//数组类型
+                    
+                    success(value)
+                    guard let data = try? JSONSerialization.data(withJSONObject: value, options: .init(rawValue: 0)), data.count > 0 else { return  }
+                    let outprint = String(data: data, encoding: .utf8) ?? ""
+
+                    print("🍎============PROJECT RESPONSE\n\(outprint)")
+
+
+                }else{
+                    
+                    let outprint = (value as! Dictionary<String,Any>).jsonValue()
+                    print("🍎============PROJECT RESPONSE\n")
+                    DLog(msg: outprint)
+
+                    //字典类型
+                    if ((realResult?["success"] as? Int) != nil&&(realResult?["success"] as? Int) == 0) || ((realResult?["code"] as? Int) != nil&&(realResult?["code"] as? Int) != 200) || ((realResult?["status"] as? Int) != nil&&(realResult?["status"] as? Int) != 200){
+                        
+                        var errmsg = realResult?["message"] as? String
+                        if errmsg == nil{
+                            
+                            errmsg = realResult?["msg"] as? String
                         }
-                    #endif
+                        ToastUtil.showHUDError(msg: errmsg ?? "")
+                        
+                        
+                    }else{
+                        
+                        success(value)
+                    }
                 }
                 
-                upload.responseObject(completionHandler: { (response: ALDataResponse<T>) in
-                    switch response.result {
-                    case .success(let res):
-                        var resSuccess = res
-                        if response.error != nil {
-                            let err = response.error! as NSError
-                            resSuccess.error = response.error
-                            resSuccess.errorMsg = err.domain
-                        }
-                        completionHandler?(.success(resSuccess))
-                    case .failure(let error):
-                        let err = error as NSError
-                        var res = T()
-                        res.error = error
-                        res.status = err.code
-                        res.errorMsg = err.domain
-                        completionHandler?(.failure(res))
-                    }
-                })
+            case .failure(let error):
                 
-            case .failure(let encodingError):
-                let err = encodingError as NSError
-                var res = T()
-                res.error = encodingError
-                res.status = err.code
-                res.errorMsg = err.domain
-                completionHandler?(.failure(res))
+                fail("网络异常")
+                print(error)
+                ToastUtil.showHUDError(msg: "网络异常")
             }
         }
     }
+    
+    
+    class func uploadPicture(url urlString: String,file:Data,success: @escaping OnSuccess,fail:@escaping OnFail)
+    {
+
+        Alamofire.upload(
+            multipartFormData: { multipartFormData in
+                
+                let formater = DateFormatter()
+                formater.dateFormat = "yyyyMMddHHmmss"
+                let fileName = formater.string(from: Date())+".png"
+                
+                multipartFormData.append(file, withName: "file", fileName:fileName, mimeType: "image/png")
+        },
+            to: urlString,
+            method:.post,
+            encodingCompletion: { encodingResult in
+                switch encodingResult {
+                case .success(let upload, _, _):
+                    upload.responseString { response in
+                        debugPrint(response)
+                        
+                        success(response.value as Any)
+                    }
+                case .failure(let encodingError):
+                    print(encodingError)
+                    fail("网络错误")
+                }
+        }
+        )
+    }
+    
     
     //MARK: Private Method
     /// 返回总的请求参数

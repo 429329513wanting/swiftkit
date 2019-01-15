@@ -9,6 +9,23 @@
 /* Begin PBXBuildFile section */
 		6229B819215B27CF00AF5873 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229B818215B27CF00AF5873 /* Constant.swift */; };
 		6229B81B215B30E100AF5873 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229B81A215B30E100AF5873 /* Define.swift */; };
+		62500B2F21ED76B600CF07F5 /* UDUserDefaultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B2C21ED76B600CF07F5 /* UDUserDefaultsModel.m */; };
+		62500B3021ED76B600CF07F5 /* SPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B2D21ED76B600CF07F5 /* SPUtil.m */; };
+		62500B3421ED771700CF07F5 /* GCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B3221ED771700CF07F5 /* GCPlaceholderTextView.m */; };
+		62500B3C21ED77A500CF07F5 /* PopoverAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B3921ED77A400CF07F5 /* PopoverAction.m */; };
+		62500B3D21ED77A500CF07F5 /* PopoverView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B3A21ED77A400CF07F5 /* PopoverView.m */; };
+		62500B3E21ED77A500CF07F5 /* PopoverViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B3B21ED77A400CF07F5 /* PopoverViewCell.m */; };
+		62500B5721ED77F700CF07F5 /* PGPickerColumnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B4021ED77F700CF07F5 /* PGPickerColumnCell.m */; };
+		62500B5821ED77F700CF07F5 /* PGPickerColumnView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B4121ED77F700CF07F5 /* PGPickerColumnView.m */; };
+		62500B5921ED77F700CF07F5 /* PGPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B4621ED77F700CF07F5 /* PGPickerView.m */; };
+		62500B5A21ED77F700CF07F5 /* PGPickerTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B4721ED77F700CF07F5 /* PGPickerTableView.m */; };
+		62500B5B21ED77F700CF07F5 /* PGDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B4921ED77F700CF07F5 /* PGDatePicker.m */; };
+		62500B5C21ED77F700CF07F5 /* UIColor+PGHex.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B4A21ED77F700CF07F5 /* UIColor+PGHex.m */; };
+		62500B5D21ED77F700CF07F5 /* PGDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B4B21ED77F700CF07F5 /* PGDatePickerView.m */; };
+		62500B5E21ED77F700CF07F5 /* NSCalendar+PGCurrent.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B4E21ED77F700CF07F5 /* NSCalendar+PGCurrent.m */; };
+		62500B5F21ED77F700CF07F5 /* NSBundle+PGDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B4F21ED77F700CF07F5 /* NSBundle+PGDatePicker.m */; };
+		62500B6021ED77F700CF07F5 /* NSDate+PGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B5221ED77F700CF07F5 /* NSDate+PGCategory.m */; };
+		62500B6121ED77F700CF07F5 /* PGDatePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62500B5421ED77F700CF07F5 /* PGDatePicker.bundle */; };
 		6280B66E21704D07000D0586 /* DBVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6280B66D21704D07000D0586 /* DBVo.swift */; };
 		628B98E1215B23A500C7A429 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B98E0215B23A500C7A429 /* AppDelegate.swift */; };
 		628B98E8215B23A700C7A429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628B98E7215B23A700C7A429 /* Assets.xcassets */; };
@@ -41,8 +58,6 @@
 		62A37179215E28C80056AE2E /* MLNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A37159215E28C80056AE2E /* MLNavigationViewController.m */; };
 		62A3717A215E28C80056AE2E /* MLPhotoKitData.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A37160215E28C80056AE2E /* MLPhotoKitData.m */; };
 		62A3717B215E28C80056AE2E /* MLImagePickerHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A37161215E28C80056AE2E /* MLImagePickerHUD.m */; };
-		62A37181215E2EA20056AE2E /* SendIFAPPSeting.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62A3717F215E2EA20056AE2E /* SendIFAPPSeting.plist */; };
-		62A37182215E2EA20056AE2E /* SendIFAPPDefault.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A37180215E2EA20056AE2E /* SendIFAPPDefault.m */; };
 		62A37191215E31CF0056AE2E /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A37184215E31CE0056AE2E /* MainViewController.m */; };
 		62A37192215E31CF0056AE2E /* DockController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A37186215E31CF0056AE2E /* DockController.m */; };
 		62A37193215E31CF0056AE2E /* Dock.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A37188215E31CF0056AE2E /* Dock.m */; };
@@ -100,6 +115,40 @@
 /* Begin PBXFileReference section */
 		6229B818215B27CF00AF5873 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6229B81A215B30E100AF5873 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		62500B2B21ED76B600CF07F5 /* UDUserDefaultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDUserDefaultsModel.h; sourceTree = "<group>"; };
+		62500B2C21ED76B600CF07F5 /* UDUserDefaultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDUserDefaultsModel.m; sourceTree = "<group>"; };
+		62500B2D21ED76B600CF07F5 /* SPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUtil.m; sourceTree = "<group>"; };
+		62500B2E21ED76B600CF07F5 /* SPUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SPUtil.h; sourceTree = "<group>"; };
+		62500B3221ED771700CF07F5 /* GCPlaceholderTextView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCPlaceholderTextView.m; sourceTree = "<group>"; };
+		62500B3321ED771700CF07F5 /* GCPlaceholderTextView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCPlaceholderTextView.h; sourceTree = "<group>"; };
+		62500B3621ED77A400CF07F5 /* PopoverView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverView.h; sourceTree = "<group>"; };
+		62500B3721ED77A400CF07F5 /* PopoverViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverViewCell.h; sourceTree = "<group>"; };
+		62500B3821ED77A400CF07F5 /* PopoverAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopoverAction.h; sourceTree = "<group>"; };
+		62500B3921ED77A400CF07F5 /* PopoverAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverAction.m; sourceTree = "<group>"; };
+		62500B3A21ED77A400CF07F5 /* PopoverView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverView.m; sourceTree = "<group>"; };
+		62500B3B21ED77A400CF07F5 /* PopoverViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopoverViewCell.m; sourceTree = "<group>"; };
+		62500B4021ED77F700CF07F5 /* PGPickerColumnCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPickerColumnCell.m; sourceTree = "<group>"; };
+		62500B4121ED77F700CF07F5 /* PGPickerColumnView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPickerColumnView.m; sourceTree = "<group>"; };
+		62500B4221ED77F700CF07F5 /* PGPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPickerView.h; sourceTree = "<group>"; };
+		62500B4321ED77F700CF07F5 /* PGPickerTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPickerTableView.h; sourceTree = "<group>"; };
+		62500B4421ED77F700CF07F5 /* PGPickerColumnCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPickerColumnCell.h; sourceTree = "<group>"; };
+		62500B4521ED77F700CF07F5 /* PGPickerColumnView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGPickerColumnView.h; sourceTree = "<group>"; };
+		62500B4621ED77F700CF07F5 /* PGPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPickerView.m; sourceTree = "<group>"; };
+		62500B4721ED77F700CF07F5 /* PGPickerTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGPickerTableView.m; sourceTree = "<group>"; };
+		62500B4921ED77F700CF07F5 /* PGDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGDatePicker.m; sourceTree = "<group>"; };
+		62500B4A21ED77F700CF07F5 /* UIColor+PGHex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PGHex.m"; sourceTree = "<group>"; };
+		62500B4B21ED77F700CF07F5 /* PGDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGDatePickerView.m; sourceTree = "<group>"; };
+		62500B4C21ED77F700CF07F5 /* PGDatePickerMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGDatePickerMacros.h; sourceTree = "<group>"; };
+		62500B4D21ED77F700CF07F5 /* NSDate+PGCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+PGCategory.h"; sourceTree = "<group>"; };
+		62500B4E21ED77F700CF07F5 /* NSCalendar+PGCurrent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSCalendar+PGCurrent.m"; sourceTree = "<group>"; };
+		62500B4F21ED77F700CF07F5 /* NSBundle+PGDatePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+PGDatePicker.m"; sourceTree = "<group>"; };
+		62500B5021ED77F700CF07F5 /* UIColor+PGHex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PGHex.h"; sourceTree = "<group>"; };
+		62500B5121ED77F700CF07F5 /* PGDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGDatePicker.h; sourceTree = "<group>"; };
+		62500B5221ED77F700CF07F5 /* NSDate+PGCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+PGCategory.m"; sourceTree = "<group>"; };
+		62500B5321ED77F700CF07F5 /* PGDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGDatePickerView.h; sourceTree = "<group>"; };
+		62500B5421ED77F700CF07F5 /* PGDatePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PGDatePicker.bundle; sourceTree = "<group>"; };
+		62500B5521ED77F700CF07F5 /* NSCalendar+PGCurrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+PGCurrent.h"; sourceTree = "<group>"; };
+		62500B5621ED77F700CF07F5 /* NSBundle+PGDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+PGDatePicker.h"; sourceTree = "<group>"; };
 		6280B66D21704D07000D0586 /* DBVo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBVo.swift; sourceTree = "<group>"; };
 		628B98DD215B23A500C7A429 /* BaseSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		628B98E0215B23A500C7A429 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -162,9 +211,6 @@
 		62A37160215E28C80056AE2E /* MLPhotoKitData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLPhotoKitData.m; sourceTree = "<group>"; };
 		62A37161215E28C80056AE2E /* MLImagePickerHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLImagePickerHUD.m; sourceTree = "<group>"; };
 		62A3717C215E2A440056AE2E /* BaseSwift-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BaseSwift-Bridging-Header.h"; sourceTree = "<group>"; };
-		62A3717E215E2EA20056AE2E /* SendIFAPPDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SendIFAPPDefault.h; sourceTree = "<group>"; };
-		62A3717F215E2EA20056AE2E /* SendIFAPPSeting.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SendIFAPPSeting.plist; sourceTree = "<group>"; };
-		62A37180215E2EA20056AE2E /* SendIFAPPDefault.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SendIFAPPDefault.m; sourceTree = "<group>"; };
 		62A37184215E31CE0056AE2E /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		62A37186215E31CF0056AE2E /* DockController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DockController.m; sourceTree = "<group>"; };
 		62A37187215E31CF0056AE2E /* LSNVController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LSNVController.h; sourceTree = "<group>"; };
@@ -248,6 +294,64 @@
 			path = util;
 			sourceTree = "<group>";
 		};
+		62500B3121ED771700CF07F5 /* GCTextView */ = {
+			isa = PBXGroup;
+			children = (
+				62500B3221ED771700CF07F5 /* GCPlaceholderTextView.m */,
+				62500B3321ED771700CF07F5 /* GCPlaceholderTextView.h */,
+			);
+			path = GCTextView;
+			sourceTree = "<group>";
+		};
+		62500B3521ED77A400CF07F5 /* PopoverView */ = {
+			isa = PBXGroup;
+			children = (
+				62500B3621ED77A400CF07F5 /* PopoverView.h */,
+				62500B3721ED77A400CF07F5 /* PopoverViewCell.h */,
+				62500B3821ED77A400CF07F5 /* PopoverAction.h */,
+				62500B3921ED77A400CF07F5 /* PopoverAction.m */,
+				62500B3A21ED77A400CF07F5 /* PopoverView.m */,
+				62500B3B21ED77A400CF07F5 /* PopoverViewCell.m */,
+			);
+			path = PopoverView;
+			sourceTree = "<group>";
+		};
+		62500B3F21ED77F700CF07F5 /* PGPickerView */ = {
+			isa = PBXGroup;
+			children = (
+				62500B4021ED77F700CF07F5 /* PGPickerColumnCell.m */,
+				62500B4121ED77F700CF07F5 /* PGPickerColumnView.m */,
+				62500B4221ED77F700CF07F5 /* PGPickerView.h */,
+				62500B4321ED77F700CF07F5 /* PGPickerTableView.h */,
+				62500B4421ED77F700CF07F5 /* PGPickerColumnCell.h */,
+				62500B4521ED77F700CF07F5 /* PGPickerColumnView.h */,
+				62500B4621ED77F700CF07F5 /* PGPickerView.m */,
+				62500B4721ED77F700CF07F5 /* PGPickerTableView.m */,
+			);
+			path = PGPickerView;
+			sourceTree = "<group>";
+		};
+		62500B4821ED77F700CF07F5 /* PGDatePicker */ = {
+			isa = PBXGroup;
+			children = (
+				62500B4921ED77F700CF07F5 /* PGDatePicker.m */,
+				62500B4A21ED77F700CF07F5 /* UIColor+PGHex.m */,
+				62500B4B21ED77F700CF07F5 /* PGDatePickerView.m */,
+				62500B4C21ED77F700CF07F5 /* PGDatePickerMacros.h */,
+				62500B4D21ED77F700CF07F5 /* NSDate+PGCategory.h */,
+				62500B4E21ED77F700CF07F5 /* NSCalendar+PGCurrent.m */,
+				62500B4F21ED77F700CF07F5 /* NSBundle+PGDatePicker.m */,
+				62500B5021ED77F700CF07F5 /* UIColor+PGHex.h */,
+				62500B5121ED77F700CF07F5 /* PGDatePicker.h */,
+				62500B5221ED77F700CF07F5 /* NSDate+PGCategory.m */,
+				62500B5321ED77F700CF07F5 /* PGDatePickerView.h */,
+				62500B5421ED77F700CF07F5 /* PGDatePicker.bundle */,
+				62500B5521ED77F700CF07F5 /* NSCalendar+PGCurrent.h */,
+				62500B5621ED77F700CF07F5 /* NSBundle+PGDatePicker.h */,
+			);
+			path = PGDatePicker;
+			sourceTree = "<group>";
+		};
 		628B98D4215B23A500C7A429 = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +378,7 @@
 			isa = PBXGroup;
 			children = (
 				628B98E0215B23A500C7A429 /* AppDelegate.swift */,
+				62A3717C215E2A440056AE2E /* BaseSwift-Bridging-Header.h */,
 				628B98E7215B23A700C7A429 /* Assets.xcassets */,
 				628B98E9215B23A700C7A429 /* LaunchScreen.storyboard */,
 				628B98EC215B23A700C7A429 /* Info.plist */,
@@ -281,7 +386,6 @@
 				62A37197215E31F80056AE2E /* module */,
 				62E47D29215DD9E3006ACA29 /* widget */,
 				6229B817215B27A800AF5873 /* util */,
-				62A3717C215E2A440056AE2E /* BaseSwift-Bridging-Header.h */,
 			);
 			path = BaseSwift;
 			sourceTree = "<group>";
@@ -443,9 +547,10 @@
 		62A3717D215E2EA20056AE2E /* SP */ = {
 			isa = PBXGroup;
 			children = (
-				62A3717E215E2EA20056AE2E /* SendIFAPPDefault.h */,
-				62A3717F215E2EA20056AE2E /* SendIFAPPSeting.plist */,
-				62A37180215E2EA20056AE2E /* SendIFAPPDefault.m */,
+				62500B2E21ED76B600CF07F5 /* SPUtil.h */,
+				62500B2D21ED76B600CF07F5 /* SPUtil.m */,
+				62500B2B21ED76B600CF07F5 /* UDUserDefaultsModel.h */,
+				62500B2C21ED76B600CF07F5 /* UDUserDefaultsModel.m */,
 			);
 			path = SP;
 			sourceTree = "<group>";
@@ -561,6 +666,10 @@
 		62E47D29215DD9E3006ACA29 /* widget */ = {
 			isa = PBXGroup;
 			children = (
+				62500B4821ED77F700CF07F5 /* PGDatePicker */,
+				62500B3F21ED77F700CF07F5 /* PGPickerView */,
+				62500B3521ED77A400CF07F5 /* PopoverView */,
+				62500B3121ED771700CF07F5 /* GCTextView */,
 				62A371EE216C8C750056AE2E /* HHGuidePageHUD */,
 				62A371C6215F78690056AE2E /* TableAlert */,
 				62A37183215E31CE0056AE2E /* Tabbar */,
@@ -700,8 +809,8 @@
 				62A371F9216C8C750056AE2E /* lead03.png in Resources */,
 				62A371F7216C8C750056AE2E /* guide_btn_bg@2x.png in Resources */,
 				628B98EB215B23A700C7A429 /* LaunchScreen.storyboard in Resources */,
-				62A37181215E2EA20056AE2E /* SendIFAPPSeting.plist in Resources */,
 				62A37165215E28C80056AE2E /* MLImagePickerMenuTableViewCell.xib in Resources */,
+				62500B6121ED77F700CF07F5 /* PGDatePicker.bundle in Resources */,
 				62A37174215E28C80056AE2E /* MLPhotoBrowserCollectionCell.xib in Resources */,
 				62A371F6216C8C750056AE2E /* lead01.png in Resources */,
 				62A371A2215E43FD0056AE2E /* HomeCell.xib in Resources */,
@@ -810,11 +919,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				62A37195215E31CF0056AE2E /* UIBarButtonItem+MJ.m in Sources */,
+				62500B5B21ED77F700CF07F5 /* PGDatePicker.m in Sources */,
 				62A3717B215E28C80056AE2E /* MLImagePickerHUD.m in Sources */,
 				62A371B3215F10590056AE2E /* Dictionary+ALExtension.swift in Sources */,
 				62A37169215E28C80056AE2E /* MLImagePickerCollectionViewCell.m in Sources */,
 				62A371B9215F10590056AE2E /* ALNetHTTPRequestOperationManager.swift in Sources */,
 				62A371B4215F10590056AE2E /* ALHTTPResponse.swift in Sources */,
+				62500B3E21ED77A500CF07F5 /* PopoverViewCell.m in Sources */,
 				62A37175215E28C80056AE2E /* MLPhotoBrowserCollectionCell.m in Sources */,
 				62A37164215E28C80056AE2E /* MLPhotoPickerCollectionView.m in Sources */,
 				62A3719B215E32240056AE2E /* HomeViewController.swift in Sources */,
@@ -827,9 +938,12 @@
 				6280B66E21704D07000D0586 /* DBVo.swift in Sources */,
 				62A371BF215F3BCE0056AE2E /* Model.swift in Sources */,
 				62A371B2215F10590056AE2E /* ALCommonConfigProtocol.swift in Sources */,
-				62A37182215E2EA20056AE2E /* SendIFAPPDefault.m in Sources */,
+				62500B3D21ED77A500CF07F5 /* PopoverView.m in Sources */,
 				62A3716A215E28C80056AE2E /* MLImagePickerViewController+MenuTableViewDataSource.m in Sources */,
+				62500B5921ED77F700CF07F5 /* PGPickerView.m in Sources */,
+				62500B5F21ED77F700CF07F5 /* NSBundle+PGDatePicker.m in Sources */,
 				62A371BA215F10590056AE2E /* ALNetHTTPRequestParameter.swift in Sources */,
+				62500B3021ED76B600CF07F5 /* SPUtil.m in Sources */,
 				62A37196215E31CF0056AE2E /* LSNVController.m in Sources */,
 				62A37179215E28C80056AE2E /* MLNavigationViewController.m in Sources */,
 				62A37166215E28C80056AE2E /* MLImagePickerMenuTableViewCell.m in Sources */,
@@ -837,30 +951,40 @@
 				62A37162215E28C80056AE2E /* DALabeledCircularProgressView.m in Sources */,
 				62A3719D215E323B0056AE2E /* MeViewController.swift in Sources */,
 				62A371B5215F10590056AE2E /* String+ALExtension.swift in Sources */,
+				62500B6021ED77F700CF07F5 /* NSDate+PGCategory.m in Sources */,
 				62A37191215E31CF0056AE2E /* MainViewController.m in Sources */,
+				62500B3C21ED77A500CF07F5 /* PopoverAction.m in Sources */,
+				62500B5C21ED77F700CF07F5 /* UIColor+PGHex.m in Sources */,
 				62A371C3215F53310056AE2E /* HandyJsonDemo.swift in Sources */,
 				62A371B0215F10590056AE2E /* ALNetHTTPCommonConfig.swift in Sources */,
+				62500B5E21ED77F700CF07F5 /* NSCalendar+PGCurrent.m in Sources */,
 				62A37193215E31CF0056AE2E /* Dock.m in Sources */,
+				62500B5821ED77F700CF07F5 /* PGPickerColumnView.m in Sources */,
 				62A37168215E28C80056AE2E /* UIButton+Animation.m in Sources */,
+				62500B5A21ED77F700CF07F5 /* PGPickerTableView.m in Sources */,
 				62A3716F215E28C80056AE2E /* MLPhoto.m in Sources */,
 				62A3716B215E28C80056AE2E /* MLImagePickerViewController.m in Sources */,
 				62A371FA216C8C750056AE2E /* HHGuidePageHUD.swift in Sources */,
 				62A3716C215E28C80056AE2E /* MLPhotoPickerAssetsManager.m in Sources */,
+				62500B5721ED77F700CF07F5 /* PGPickerColumnCell.m in Sources */,
 				62A37194215E31CF0056AE2E /* DockItem.m in Sources */,
 				62A37172215E28C80056AE2E /* MLPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				62A371B1215F10590056AE2E /* ALNetHTTPResponse.swift in Sources */,
 				62A37173215E28C80056AE2E /* MLPhotoPickerBrowserPhotoView.m in Sources */,
 				62A3716D215E28C80056AE2E /* MLPhotoPickerData.m in Sources */,
 				628B98E1215B23A500C7A429 /* AppDelegate.swift in Sources */,
+				62500B5D21ED77F700CF07F5 /* PGDatePickerView.m in Sources */,
 				62A37177215E28C80056AE2E /* MLPhotoPickerManager.m in Sources */,
 				62A371BC215F29F30056AE2E /* API.swift in Sources */,
 				62A371C5215F6C330056AE2E /* ToastUtil.swift in Sources */,
 				62E47D2B215DF0B6006ACA29 /* Extension.swift in Sources */,
 				62A371B7215F10590056AE2E /* ALResult.swift in Sources */,
+				62500B3421ED771700CF07F5 /* GCPlaceholderTextView.m in Sources */,
 				62A371F5216C8C750056AE2E /* UIImage+GIF.swift in Sources */,
 				62A37171215E28C80056AE2E /* MLPhotoPickerBrowserPhotoImageView.m in Sources */,
 				6229B81B215B30E100AF5873 /* Define.swift in Sources */,
 				62A37163215E28C80056AE2E /* DACircularProgressView.m in Sources */,
+				62500B2F21ED76B600CF07F5 /* UDUserDefaultsModel.m in Sources */,
 				62A371A1215E43FD0056AE2E /* HomeCell.swift in Sources */,
 				62A371B6215F10590056AE2E /* DataRequest+ALExtension.swift in Sources */,
 				6229B819215B27CF00AF5873 /* Constant.swift in Sources */,

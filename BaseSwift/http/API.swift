@@ -36,18 +36,24 @@ class API: NSObject {
     }
     
     //上传头像
-    public static func upLoadAvater(params:[String:String],success:@escaping OnSuccess)
+
+    //上传图片
+    public static func upPicture(params:[String:Data],success:@escaping OnSuccess)
     {
-        let img = UIImage.init(named: "lead01")
-        let data = img?.jpegData(compressionQuality: 1)
-        HTTPRequestManager.uploadPicture(url: Constant.UpImage,
-                                  file:["image":data!]) { (result:ALResult<ALNetHTTPResponseDictionary>) in
+        
+        
+        HTTPRequestManager.uploadPicture(url:"", file: params["image"]!, success: { (result) in
+            
+            
+            let urlpath = result as! String
+            success(urlpath)
+            
+        })
+        { (msg) in
             
             
         }
-
     }
-
 }
 
 extension API

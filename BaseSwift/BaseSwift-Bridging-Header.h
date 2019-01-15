@@ -10,7 +10,13 @@
 #define BaseSwift_Bridging_Header_h
 
 #import "MLPhotoBrowserViewController.h"
-#import "SendIFAPPDefault.h"
 #import "MainViewController.h"
 #import "WTTableAlertView.h"
+#import "SPUtil.h"
+#import "GCPlaceholderTextView.h"
+#import "PopoverView.h"
+#import "PopoverAction.h"
+#import <MJRefresh/MJRefresh.h>
+#import "PGDatePicker.h"
+
 #endif /* BaseSwift_Bridging_Header_h */

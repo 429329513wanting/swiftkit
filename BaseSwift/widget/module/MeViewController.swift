@@ -16,7 +16,6 @@ class MeViewController: UIViewController {
         upBtn.setTitle("上传", for: .normal)
         upBtn.setTitleColor(UIColor.blue, for: .normal)
         upBtn.titleLabel?.font = UIFont.commonFont
-        upBtn.addTarget(self, action: #selector(upClick), for: .touchUpInside)
         return upBtn
     }()
     override func viewDidLoad() {
@@ -35,15 +34,7 @@ class MeViewController: UIViewController {
         
         
     }
-    @objc private func upClick()
-    {
-        
-        API.upLoadAvater(params: [:]) { (result) in
-            
-            
-        }
-                
-    }
+
 
 
 

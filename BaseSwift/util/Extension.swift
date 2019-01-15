@@ -175,6 +175,19 @@ extension UIImage {
         return self.jpegData(compressionQuality:rate)
     }
     
+    public func zipMaxSizeImage() -> Data{
+        
+        let maxFileSize: CGFloat = 100*1024
+        let compression: CGFloat = 0.8
+        var compressedData: NSData = self.jpegData(compressionQuality: compression)! as NSData
+        
+        while compressedData.length > Int(maxFileSize) {
+            
+            compressedData = self.resizeWithWidth(self.size.width*compression).jpegData(compressionQuality: compression)!as NSData
+        }
+        return compressedData as Data
+    }
+    
     /// EZSE: Returns Image size in Bytes
     public func getSizeAsBytes() -> Int {
         return self.jpegData(compressionQuality: 1.0)?.count ?? 0
