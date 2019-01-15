@@ -1,0 +1,43 @@
+
+{
+    "bankTree": {
+        "zhiHangList": [
+            {
+                "zhiHang": {
+                    "bankOrgId": "6F1E247962434A2790E205C819CD91C4",
+                    "parentNo": 103,
+                    "identityNo": 104,
+                    "name": "宁波银行下关支行",
+                    "role": "zh"
+                },
+                "renyuanList": [
+                    {
+                        "bankOrgId": "59083B3825A344848A70CA3F34648C88",
+                        "parentNo": 104,
+                        "identityNo": 106,
+                        "name": "renxuan（主管）",
+                        "role": "zg"
+                    }
+                ]
+            },
+            {
+                "zhiHang": {
+                    "bankOrgId": "6F74C75E9CC841E39C149F9E86E7E300",
+                    "parentNo": 103,
+                    "identityNo": 105,
+                    "name": "宁波银行建康支行",
+                    "role": "zh"
+                },
+                "renyuanList": [
+                    {
+                        "bankOrgId": "C36DEBA6987349CC9FBD6A73672D2208",
+                        "parentNo": 105,
+                        "identityNo": 156,
+                        "name": "王台（经理）",
+                        "role": "jl"
+                    }
+                ]
+            }
+        ]
+    }
+}
