@@ -30,12 +30,6 @@ class MeViewController: UIViewController {
         view.addSubview(upBtn)
         let _ = upBtn.sd_layout()?.widthIs(95)?.heightIs(45)?.centerXEqualToView(view)?.centerYEqualToView(view)
         
-        
-        
-        
     }
-
-
-
 
 }
