@@ -26,6 +26,7 @@
 		62500B5F21ED77F700CF07F5 /* NSBundle+PGDatePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B4F21ED77F700CF07F5 /* NSBundle+PGDatePicker.m */; };
 		62500B6021ED77F700CF07F5 /* NSDate+PGCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B5221ED77F700CF07F5 /* NSDate+PGCategory.m */; };
 		62500B6121ED77F700CF07F5 /* PGDatePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 62500B5421ED77F700CF07F5 /* PGDatePicker.bundle */; };
+		627A2FAD21F1ABE0007498A6 /* TestClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 627A2FAC21F1ABE0007498A6 /* TestClass.swift */; };
 		6280B66E21704D07000D0586 /* DBVo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6280B66D21704D07000D0586 /* DBVo.swift */; };
 		628B98E1215B23A500C7A429 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 628B98E0215B23A500C7A429 /* AppDelegate.swift */; };
 		628B98E8215B23A700C7A429 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 628B98E7215B23A700C7A429 /* Assets.xcassets */; };
@@ -149,6 +150,7 @@
 		62500B5421ED77F700CF07F5 /* PGDatePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = PGDatePicker.bundle; sourceTree = "<group>"; };
 		62500B5521ED77F700CF07F5 /* NSCalendar+PGCurrent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSCalendar+PGCurrent.h"; sourceTree = "<group>"; };
 		62500B5621ED77F700CF07F5 /* NSBundle+PGDatePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSBundle+PGDatePicker.h"; sourceTree = "<group>"; };
+		627A2FAC21F1ABE0007498A6 /* TestClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestClass.swift; sourceTree = "<group>"; };
 		6280B66D21704D07000D0586 /* DBVo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBVo.swift; sourceTree = "<group>"; };
 		628B98DD215B23A500C7A429 /* BaseSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BaseSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		628B98E0215B23A500C7A429 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -352,6 +354,15 @@
 			path = PGDatePicker;
 			sourceTree = "<group>";
 		};
+		627A2FAB21F1ABB9007498A6 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				627A2FAC21F1ABE0007498A6 /* TestClass.swift */,
+			);
+			name = test;
+			path = BaseSwift/test;
+			sourceTree = SOURCE_ROOT;
+		};
 		628B98D4215B23A500C7A429 = {
 			isa = PBXGroup;
 			children = (
@@ -385,6 +396,7 @@
 				62A371A3215F102B0056AE2E /* http */,
 				62A37197215E31F80056AE2E /* module */,
 				62E47D29215DD9E3006ACA29 /* widget */,
+				627A2FAB21F1ABB9007498A6 /* test */,
 				6229B817215B27A800AF5873 /* util */,
 			);
 			path = BaseSwift;
@@ -967,6 +979,7 @@
 				62A371FA216C8C750056AE2E /* HHGuidePageHUD.swift in Sources */,
 				62A3716C215E28C80056AE2E /* MLPhotoPickerAssetsManager.m in Sources */,
 				62500B5721ED77F700CF07F5 /* PGPickerColumnCell.m in Sources */,
+				627A2FAD21F1ABE0007498A6 /* TestClass.swift in Sources */,
 				62A37194215E31CF0056AE2E /* DockItem.m in Sources */,
 				62A37172215E28C80056AE2E /* MLPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				62A371B1215F10590056AE2E /* ALNetHTTPResponse.swift in Sources */,

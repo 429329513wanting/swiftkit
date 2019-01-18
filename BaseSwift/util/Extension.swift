@@ -160,6 +160,20 @@ extension String
         let predicate = NSPredicate.init(format: "SELF MATCHES%@",regex);
         return predicate.evaluate(with: self)
     }
+    //邮箱是否有效
+    var mailValidate: Bool {
+        
+        let regex = "^([A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,4}$)"
+        let predicate = NSPredicate.init(format: "SELF MATCHES%@",regex);
+        return predicate.evaluate(with: self)
+    }
+    //身份证是否有效
+    var idcardValidate: Bool {
+        
+        let regex = "^(\\d{14}|\\d{17})(\\d|[xX])$"
+        let predicate = NSPredicate.init(format: "SELF MATCHES%@",regex);
+        return predicate.evaluate(with: self)
+    }
     
 }
 
@@ -187,6 +201,7 @@ extension UIImage {
         }
         return compressedData as Data
     }
+    
     
     /// EZSE: Returns Image size in Bytes
     public func getSizeAsBytes() -> Int {
@@ -300,6 +315,9 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return image!
     }
+    
+
+
 }
 
 extension Array {
@@ -646,3 +664,4 @@ extension NSLayoutConstraint {
     }
     
 }
+

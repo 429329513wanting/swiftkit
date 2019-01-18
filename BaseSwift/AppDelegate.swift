@@ -14,6 +14,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     var mainViewController: MainViewController?
+    
+
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -31,6 +33,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         ///隐藏键盘上面的toolBar,默认是开启的
         IQKeyboardManager.shared.enableAutoToolbar = false
         setStaticGuidePage()
+        
+        TestClass.dateExec()
         
         return true
     }
