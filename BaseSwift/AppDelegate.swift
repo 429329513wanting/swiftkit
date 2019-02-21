@@ -15,15 +15,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     var mainViewController: MainViewController?
     
-
-
+    var blockRotation: UIInterfaceOrientationMask = .portrait{
+        didSet{
+            if blockRotation.contains(.portrait){
+                //强制设置成竖屏
+                UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
+            }else{
+                //强制设置成横屏 let rotation : UIInterfaceOrientationMask = [.landscapeLeft, .landscapeRight]
+                UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
+                
+            }
+        }
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         self.window = UIWindow()
         self.window?.frame = UIScreen.main.bounds
         self.window?.makeKeyAndVisible()
-        
+
 
         
         ///控制自动键盘功能启用与否

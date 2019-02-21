@@ -14,7 +14,7 @@ import SDAutoLayout
 import HandyJSON
 import IQKeyboardManagerSwift
 import SwiftDate
-import FMDB
+
 
 
 
@@ -37,6 +37,8 @@ let TIMEOUT = 15
 //屏幕适配
 let KScreenWidth = UIScreen.main.bounds.size.width
 let KScreenHeight = UIScreen.main.bounds.size.height
+let kAppdelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
+
 
 let isPad = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.pad
 let IS_IPHONE = UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiom.phone

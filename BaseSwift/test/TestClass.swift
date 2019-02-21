@@ -88,7 +88,7 @@ class TestClass: NSObject {
         let rome = Region(calendar: Calendars.gregorian, zone: Zones.asiaShanghai,
                           locale: Locales.chinese)
         
-        //从时间间隔创建
+        //时间戳转date
         let date22 = DateInRegion(seconds: 8987897671, region: rome)
         let date33 = DateInRegion(milliseconds: 5000, region: rome).toFormat("yyyy-MM-dd HH:mm:ss")
         print("data2：", date22.date)

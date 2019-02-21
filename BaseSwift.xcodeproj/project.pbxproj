@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6229B819215B27CF00AF5873 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229B818215B27CF00AF5873 /* Constant.swift */; };
 		6229B81B215B30E100AF5873 /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6229B81A215B30E100AF5873 /* Define.swift */; };
+		622A29E52219748600E18EC4 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 622A29E42219748600E18EC4 /* Accelerate.framework */; };
 		62500B2F21ED76B600CF07F5 /* UDUserDefaultsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B2C21ED76B600CF07F5 /* UDUserDefaultsModel.m */; };
 		62500B3021ED76B600CF07F5 /* SPUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B2D21ED76B600CF07F5 /* SPUtil.m */; };
 		62500B3421ED771700CF07F5 /* GCPlaceholderTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62500B3221ED771700CF07F5 /* GCPlaceholderTextView.m */; };
@@ -116,6 +117,11 @@
 /* Begin PBXFileReference section */
 		6229B818215B27CF00AF5873 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		6229B81A215B30E100AF5873 /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		622A29DC2219745500E18EC4 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		622A29DE2219746100E18EC4 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		622A29E02219746E00E18EC4 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		622A29E22219747D00E18EC4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		622A29E42219748600E18EC4 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		62500B2B21ED76B600CF07F5 /* UDUserDefaultsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UDUserDefaultsModel.h; sourceTree = "<group>"; };
 		62500B2C21ED76B600CF07F5 /* UDUserDefaultsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UDUserDefaultsModel.m; sourceTree = "<group>"; };
 		62500B2D21ED76B600CF07F5 /* SPUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SPUtil.m; sourceTree = "<group>"; };
@@ -264,6 +270,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				622A29E52219748600E18EC4 /* Accelerate.framework in Frameworks */,
 				9DE3EFA8C760F8D52B5A8A58 /* Pods_BaseSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -703,6 +710,11 @@
 		95AF8C2976A273FDC53290E2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				622A29E42219748600E18EC4 /* Accelerate.framework */,
+				622A29E22219747D00E18EC4 /* libsqlite3.tbd */,
+				622A29E02219746E00E18EC4 /* libresolv.tbd */,
+				622A29DE2219746100E18EC4 /* libc++.tbd */,
+				622A29DC2219745500E18EC4 /* libz.tbd */,
 				D39A23147C206507F4BDEB95 /* Pods_BaseSwift.framework */,
 			);
 			name = Frameworks;
@@ -890,10 +902,10 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BaseSwift/Pods-BaseSwift-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/EasyNavigation/EasyNavigation.framework",
-				"${BUILT_PRODUCTS_DIR}/FMDB/FMDB.framework",
 				"${BUILT_PRODUCTS_DIR}/HMSegmentedControl/HMSegmentedControl.framework",
 				"${BUILT_PRODUCTS_DIR}/HandyJSON/HandyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/MBProgressHUD/MBProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
 				"${BUILT_PRODUCTS_DIR}/SDAutoLayout/SDAutoLayout.framework",
@@ -906,10 +918,10 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyNavigation.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FMDB.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HMSegmentedControl.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HandyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MBProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDAutoLayout.framework",
@@ -1170,6 +1182,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55NWUQE9BB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BaseSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1190,6 +1206,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 55NWUQE9BB;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = BaseSwift/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -14,6 +14,7 @@ pod 'IQKeyboardManagerSwift'
 pod 'SVProgressHUD'
 pod 'Toast-Swift', '~> 4.0.0'
 pod 'SwiftDate'
-pod 'FMDB'
+pod 'Kingfisher'
+
 
 end

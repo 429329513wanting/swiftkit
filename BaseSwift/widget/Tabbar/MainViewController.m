@@ -31,10 +31,6 @@
     .widthRatioToView(_dock,1);
 }
 
-- (UIStatusBarStyle)preferredStatusBarStyle{
-    
-    return UIStatusBarStyleLightContent;
-}
 #pragma mark 初始化所有的子控制器
 - (void)addAllChildControllers{
     
