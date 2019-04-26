@@ -3,11 +3,11 @@ use_frameworks!
 target 'BaseSwift' do
 
 pod 'SDWebImage'
-pod 'SDAutoLayout','~> 2.2.0'
+pod 'SDAutoLayout','~> 2.2.1'
 pod 'MJRefresh','~> 3.1.15.1'
 pod 'EasyNavigation', '~> 1.0.3'
 pod 'Alamofire' , '~> 4.7.3'
-pod 'HandyJSON' , '~> 4.2.0'
+pod 'HandyJSON' , '~> 5.0.0-beta.1'
 pod 'MBProgressHUD'
 pod 'HMSegmentedControl'
 pod 'IQKeyboardManagerSwift'
