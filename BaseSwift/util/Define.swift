@@ -57,14 +57,13 @@ let IS_IPHONE_XS_Max = UIScreen.instancesRespond(to:#selector(getter: UIScreen.m
 let IS_iPhoneX = UIScreen.instancesRespond(to:#selector(getter: UIScreen.main.currentMode)) ? __CGSizeEqualToSize(CGSize(width:1125,height:2436), (UIScreen.main.currentMode?.size)!) : false
 
 
-let HT_StatusBarHeight = ((IS_iPhoneX||IS_IPHONE_XR||IS_IPHONE_XS_Max) ? 44 : 20)
-let HT_NavigationBarHeight  = 44
-let HT_TabbarHeight = ((IS_iPhoneX||IS_IPHONE_XR||IS_IPHONE_XS_Max)  ? (49+34) : 49)
-let HT_TabbarSafeBottomMargin = ((IS_iPhoneX||IS_IPHONE_XR||IS_IPHONE_XS_Max)  ? 34 : 0)
+let HT_StatusBarHeight = ((IS_iPhoneX||IS_IPHONE_XR||IS_IPHONE_XS_Max) ? CGFloat(44) : CGFloat(20))
+let HT_NavigationBarHeight  = CGFloat(44)
+let HT_TabbarHeight = ((IS_iPhoneX||IS_IPHONE_XR||IS_IPHONE_XS_Max)  ? (CGFloat(49)+CGFloat(34)) : CGFloat(49))
+let HT_TabbarSafeBottomMargin = ((IS_iPhoneX||IS_IPHONE_XR||IS_IPHONE_XS_Max)  ? CGFloat(34) : CGFloat(0))
 let HT_StatusBarAndNavigationBarHeight = ((IS_iPhoneX||IS_IPHONE_XR||IS_IPHONE_XS_Max)  ? CGFloat(88) : CGFloat(64))
 
 let suitParm:CGFloat = (iphone6p ? 1.12 : (iphone6 ? 1.0 : (iphone6pBigMode ? 1.01 : ((IS_iPhoneX||IS_IPHONE_XR) ? 1.0 : 0.85))))
-
 
 
 func PUSH(from:UIViewController, to: UIViewController) {

@@ -174,7 +174,43 @@ extension String
         let predicate = NSPredicate.init(format: "SELF MATCHES%@",regex);
         return predicate.evaluate(with: self)
     }
-    
+    //enCodeBase64 编码
+    var base64EnCodeing: String{
+        
+        let plainData = self.data(using: String.Encoding.utf8)
+        let base64String = plainData?.base64EncodedString(options: NSData.Base64EncodingOptions.init(rawValue: 0))
+        return base64String!
+    }
+    //decodeBase64 解码
+    var base64DeCodeing: String{
+        
+        let decodedData = NSData(base64Encoded: self, options: NSData.Base64DecodingOptions.init(rawValue: 0))
+        
+        let decodedString = NSString(data: decodedData! as Data, encoding: String.Encoding.utf8.rawValue)! as String
+        
+        return decodedString
+        
+    }
+    //sha1加密
+    var SHA1: String{
+        
+        let data = self.data(using: String.Encoding.utf8)!
+        
+        var digest = [UInt8](repeating: 0, count:Int(CC_SHA1_DIGEST_LENGTH))
+
+        let newData = NSData.init(data: data)
+
+        CC_SHA1(newData.bytes, CC_LONG(data.count), &digest)
+
+        let output = NSMutableString(capacity: Int(CC_SHA1_DIGEST_LENGTH))
+
+        for byte in digest {
+
+                output.appendFormat("%02x", byte)
+
+            }
+         return output as String
+    }
 }
 
 extension UIImage {
